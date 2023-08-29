@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ChuckCard from './components/chuck_card';
 import ChuckInfo from './components/chuck_info';
 import Joke from './joke';
- 
+
 function App() {
 
 	const [chuckGreeting, setChuckGreeting] = useState<string>("I am Chuck Norris!!!")
@@ -30,10 +30,13 @@ function App() {
 		<div className="App">
 
 			<h1>React props and state</h1>
-			<ChuckCard header2 = {chuckGreeting} />
+			<ChuckCard header2={chuckGreeting} />
 
 			<h2>Chuck Info: </h2>
-			<ChuckInfo />
+			<ChuckInfo
+				whalesSaved={whalesSaved}
+				kicksDone={roundHouseKicks}
+			/>
 
 			<h2>Jokes: </h2>
 
